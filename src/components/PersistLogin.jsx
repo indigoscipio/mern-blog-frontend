@@ -38,14 +38,14 @@ const PersistLogin = () => {
   } else if (isError) {
     console.log("error");
     content = (
-      <>
+      <div className="container mx-auto my-32">
         <Link
           to="/signin"
           className="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600"
         >
           Error! Please Login Again
         </Link>
-      </>
+      </div>
     );
   } else if (isSuccess) {
     console.log("VerifyRefresh Success!");
