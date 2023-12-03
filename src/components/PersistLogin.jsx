@@ -43,7 +43,7 @@ const PersistLogin = () => {
           to="/signin"
           className="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600"
         >
-          Error! Please Login Again
+          Please Log In / Create Account To Get Started!!
         </Link>
       </div>
     );
