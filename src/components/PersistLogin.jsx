@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import { Link, Outlet } from "react-router-dom";
 import { useRefreshMutation } from "../services/authApi";
 import { selectCurrentToken } from "../slices/authSlice";
+import Loader from "./Loader";
 
 const PersistLogin = () => {
   const token = useSelector(selectCurrentToken);
@@ -33,12 +34,17 @@ const PersistLogin = () => {
 
   if (isLoading) {
     console.log("loading...");
-    content = <p>Loading...</p>;
+    content = <Loader />;
   } else if (isError) {
     console.log("error");
     content = (
       <>
-        <Link to="/signin"> Error! Plesae Login Again </Link>
+        <Link
+          to="/signin"
+          className="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600"
+        >
+          Error! Please Login Again
+        </Link>
       </>
     );
   } else if (isSuccess) {
