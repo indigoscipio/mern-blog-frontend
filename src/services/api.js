@@ -3,7 +3,7 @@ import { setCredentials } from "../slices/authSlice";
 
 //prepare header
 const baseQuery = fetchBaseQuery({
-  baseUrl: "http://localhost:5000",
+  baseUrl: "https://mern-blog-backend.fly.dev",
   credentials: "include",
   prepareHeaders: (headers, { getState }) => {
     const token = getState().auth.token;
