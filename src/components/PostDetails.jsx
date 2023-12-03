@@ -27,7 +27,7 @@ const PostDetails = () => {
     content = (
       <div className="max-w-md mx-auto p-4 bg-white shadow-md rounded-md">
         <h1 className="text-2xl font-bold mb-4">
-          Post Title: {postData?.title}
+          Post Title: {postData.title}
         </h1>
         <h2 className="text-lg mb-2">Posted by: {postData.author.username}</h2>
         <p className="text-gray-500 mb-2">Post Id: {postData._id}</p>

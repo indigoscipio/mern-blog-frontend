@@ -16,8 +16,8 @@ const EditPostForm = () => {
   const navigate = useNavigate();
   const author = getUserIdFromToken();
 
-  const [title, setTitle] = useState(postData.title || "");
-  const [content, setContent] = useState(postData.content || "");
+  const [title, setTitle] = useState(postData?.title || "");
+  const [content, setContent] = useState(postData?.content || "");
 
   const handleFormUpdate = async (event) => {
     event.preventDefault();
